@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Trang Cá Nhân Của Khải Minh
+</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: url("bg.jpg");
+    padding:20px;
+}
+
+.avatar{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit: cover;
+    border:4px solid #0084ff;
+    margin-bottom:15px;
+    box-shadow:0 0 15px rgba(0,132,255,0.5);
+}
+
+.container{
+    width:90%;
+    max-width:400px;
+
+    /* lớp phủ đen mờ */
+    background: rgba(0,0,0,0.35);
+
+    /* hiệu ứng kính mờ */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+h1{
+    margin-bottom:10px;
+    color: white;
+    font-size:24px;
+}
+
+p{
+    color: white;
+    margin-bottom:25px;
+    line-height:1.5;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:12px;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+    color:white;
+    font-weight:bold;
+}
+
+button:hover{
+    transform:scale(1.03);
+}
+
+.facebook{
+    background:#1877f2;
+}
+
+.tiktok{
+    background:#000;
+}
+
+.instagram{
+    background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+}
+
+.telegram{
+    background:#229ED9;
+}
+
+.zalo-btn{
+    background:#0084ff;
+}
+
+.download-btn{
+    background:#16a34a;
+}
+
+.zl{
+    width:220px;
+    border-radius:15px;
+    margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<!-- Avatar -->
+<img src="avt.jpg" class="avatar">
+<h1>👋 Chào mừng mọi người đến với trang cá nhân của tôi</h1>
+
+<p>
+Xin chào, mình là Khải Minh  <br>
+Hãy kết bạn với tôi qua các nền tảng này💖<br>
+Hello, I am Khai Minh<br>
+Let's become friends through these
+platforms 💖
+</p>
+
+<button class="facebook"
+onclick="openApp('https://www.facebook.com/share/18VSJwkS6M/')">
+Facebook
+</button>
+
+<button class="tiktok"
+onclick="openApp('https://tiktok.com/@minhnguyen14029')">
+TikTok
+</button>
+
+<button class="instagram"
+onclick="openApp('https://www.instagram.com/khaiminhnguyen54?igsh=MTg0bWJheDhmdWtjdg==')">
+Instagram
+</button>
+
+<button class="telegram"
+onclick="openApp('https://t.me/Minhitk')">
+Telegram
+</button>
+
+
+<!-- Copy số -->
+<button class="zalo-btn" onclick="copyPhone()">Zalo  0362528212
+</button>
+
+<!-- QR -->
+<img src="zl.jpg" class="zl">
+
+
+<!-- Tải QR -->
+<a href="zl.jpg" download="QR-Zalo-KhaiMinh">
+<button class="download-btn" onclick="downloadQR()">
+Lưu mã QR
+</button>
+</a>
+
+</div>
+
+<script>
+  function downloadQR() {
+
+    const link = document.createElement('a');
+
+    link.href = 'qr.png';
+
+    link.download = 'QR-Zalo-KhaiMinh';
+
+    document.body.appendChild(link);
+
+    link.click();
+
+    document.body.removeChild(link);
+}
+function openApp(link){
+    window.location.href = link;
+}
+
+function copyPhone(){
+    navigator.clipboard.writeText("0362528212");
+}
+</script>
+
+</body>
+</html>
