@@ -111,6 +111,25 @@ button:hover{
     border-radius:15px;
     margin-top:10px;
 }
+.mess-btn{
+  background:#D946EF;
+}
+.mess{
+  width:220px;
+  border-radius:15px;
+  margin-top:10px;
+}
+.lk-btn{
+  background: linear-gradient(135deg, #FFE27A, #F7D54A);
+  
+}
+.wc{
+  width:220px;
+  border-radius:15px;
+  margin-top:10px;
+
+}
+
 </style>
 </head>
 
@@ -154,15 +173,36 @@ Telegram
 <button class="zalo-btn" onclick="copyPhone()">Zalo  0362528212
 </button>
 
+<button class="mess-btn" onclick="openApp('https://m.me/minhktol')">Messenger</button>
+
+<button class="lk-btn" onclick="('https://locket.cam/minh_16g')">Locket</button>
+
 <!-- QR -->
 <img src="zl.jpg" class="zl">
-
 
 <!-- Tải QR -->
 <a href="zl.jpg" download="QR-Zalo-KhaiMinh">
 <button class="download-btn" onclick="downloadQR()">
-Lưu mã QR
+Lưu mã QR Zalo
 </button>
+
+<!-- QR -->
+<img src="Mess.jpg" class="mess">
+</a>
+<!-- Tải QR -->
+<a href="Mess.jpg" download="QR-Mess-KhaiMinh">
+  <button class="download-btn" onclick="downloadQR()">
+    Lưu mã QR Mess
+  </button>
+  
+</a>
+<!-- QR -->
+<img src="wc.jpg" class="wc">
+<!-- Tải QR -->
+<a href="wc.jpg" download="QR-Wc-KhaiMinh">
+  <button class="download-btn" onclick="downloadQR()">
+    Lưu mã QR WeChat
+  </button>
 </a>
 
 </div>
